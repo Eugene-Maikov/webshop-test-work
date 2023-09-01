@@ -1,0 +1,144 @@
+//---------------------------- Fonts -------------------------------
+@font-face {
+  font-family: "CeraPro";
+  src: url("fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url("fonts/CeraPro-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CeraPro";
+  src: url("fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("fonts/Orbitron-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+//---------------------------- end Fonts -------------------------------
+//---------------------------- Variables -------------------------------
+
+:root {
+  --font-family: "CeraPro", sans-serif;
+
+  --content-width: 1290px;
+
+  @media (max-width: 1330px) {
+    --content-width: 945px;
+  }
+  @media (max-width: 945px) {
+    --content-width: 100%;
+  }
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --light-color: #F5F6F7;
+  --gray-color: #A8A9AA;
+  --border-color: #E4E5E6;
+
+  //Background
+  --secondary-color: #5695CB;
+  --primary-color: #27364B;
+
+  //Text
+  --text-color-dark: #262728;
+  --text-color-light: #fff;
+
+  --figureClipPath: polygon(
+      50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%
+  );
+}
+
+//---------------------------- end Variables -------------------------------
+//---------------------------- Settings -------------------------------
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: white;
+  font-family: var(--font-family, sans-serif);
+}
+
+picture img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+//---------------------------- end Settings -------------------------------
+//---------------------------- Title -------------------------------
+.main-title {
+  padding: 48px 0 16px 0;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+//---------------------------- end Title -------------------------------
+//---------------------------- Items -------------------------------
+
+
+
+
+
+
+//---------------------------- end Items -------------------------------
