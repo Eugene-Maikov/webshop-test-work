@@ -1,0 +1,17 @@
+.header__logo svg {
+  width: 217px;
+  height: 56px;
+}
+
+.header__search svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--durk-color);
+}
+
+.header__basket-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--durk-color);
+}
+/*# sourceMappingURL=sprite.css.map */

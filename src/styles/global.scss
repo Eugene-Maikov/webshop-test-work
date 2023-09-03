@@ -1,69 +1,58 @@
 //---------------------------- Fonts -------------------------------
-@font-face {
-  font-family: "CeraPro";
-  src: url("fonts/CeraPro-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
+//@font-face {
+//  font-family: "Roboto";
+//  src: url("fonts/Roboto-Regular.woff2") format("woff2");
+//  font-weight: 400;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "Roboto";
+//  src: url("fonts/Roboto-Black.woff2") format("woff2");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "Roboto Condensed";
+//  src: url("fonts/RobotoCondensed-Regular.woff2") format("woff2");
+//  font-weight: 400;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "Roboto Condensed";
+//  src: url("fonts/RobotoCondensed-Bold.woff2") format("woff2");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "AmaticSC";
+//  src: url("fonts/AmaticSC-Bold.woff2") format("woff2");
+//  font-weight: 700;
+//  font-style: normal;
+//}
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
-@font-face {
-  font-family: "CeraPro";
-  src: url("fonts/CeraPro-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CeraPro";
-  src: url("fonts/CeraPro-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Orbitron";
-  src: url("fonts/Orbitron-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-}
 
 //---------------------------- end Fonts -------------------------------
 //---------------------------- Variables -------------------------------
 
 :root {
-  --font-family: "CeraPro", sans-serif;
+  --font-family: 'Roboto';
+  //font-family: 'Amatic SC', cursive;
+  //font-family: 'Roboto Condensed', sans-serif;
 
-  --content-width: 1290px;
-
-  @media (max-width: 1330px) {
-    --content-width: 945px;
-  }
-  @media (max-width: 945px) {
-    --content-width: 100%;
-  }
-  --container-offset: 20px;
+  --content-width: 1720px;
+  --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
-  --light-color: #F5F6F7;
-  --gray-color: #A8A9AA;
-  --border-color: #E4E5E6;
-
-  //Background
-  --secondary-color: #5695CB;
-  --primary-color: #27364B;
-
-  //Text
-  --text-color-dark: #262728;
-  --text-color-light: #fff;
-
-  --figureClipPath: polygon(
-      50% 0%,
-      100% 25%,
-      100% 75%,
-      50% 100%,
-      0% 75%,
-      0% 25%
-  );
+  --white-color: #FFF;
+  --durk-color: #292B2A;
+  --gray-color: #D7D7D7;
+  --gray-color-var: #D7D7D7;
+  --pinck-color: #CEAFC8;
 }
 
 //---------------------------- end Variables -------------------------------
@@ -88,17 +77,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  background-color: white;
+  background-color: var(--white-color);
   font-family: var(--font-family, sans-serif);
 }
 
-picture img {
+picture img,
+picture source {
   width: 100%;
   display: block;
-}
-
-a {
-  text-decoration: none;
 }
 
 .wrapper {
@@ -121,24 +107,3 @@ a {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 }
-
-//---------------------------- end Settings -------------------------------
-//---------------------------- Title -------------------------------
-.main-title {
-  padding: 48px 0 16px 0;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-//---------------------------- end Title -------------------------------
-//---------------------------- Items -------------------------------
-
-
-
-
-
-
-//---------------------------- end Items -------------------------------
