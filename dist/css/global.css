@@ -7,8 +7,11 @@
   --white-color: #FFF;
   --durk-color: #292B2A;
   --gray-color: #D7D7D7;
-  --gray-color-var: #D7D7D7;
-  --pinck-color: #CEAFC8;
+  --gray-color-var: #959595;
+  --fruit-color: #CEAFC8;
+  --vegetables-color: #FFD452;
+  --berries-color: #FC8663;
+  --juices-color: #88BCB9;
 }
 
 html {
