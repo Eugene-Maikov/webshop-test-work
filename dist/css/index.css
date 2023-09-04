@@ -236,14 +236,39 @@
 .cards__item:hover .cards__item-ellipse._vertical {
   top: 0;
 }
+.cards__item-bg {
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  position: absolute;
+  left: -212px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 206px;
+  height: 300px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+.cards__item-bg .box {
+  width: 100%;
+  height: 100%;
+  background-color: var(--juices-color);
+  -webkit-clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+}
 .cards__item:nth-child(4n+1) {
   grid-column: span 2;
   grid-row: span 1;
 }
-.cards__item:nth-child(4n+1) .cards__item-ellipse._horizontal {
-  width: 543px;
+.cards__item:nth-child(4n+1) .box {
+  width: 381px;
   left: -379px;
-  fill: var(--fruit-color);
+  background-color: var(--fruit-color);
+}
+.cards__item:nth-child(4n+1) .cards__item-bg {
+  left: -600px;
 }
 .cards__item:nth-child(4n+1) .cards__more {
   margin-top: 140px;
@@ -254,15 +279,34 @@
 .cards__item:nth-child(4n+1):hover .cards__more p {
   color: var(--white-color);
 }
-.cards__item:nth-child(4n+1):hover .cards__item-ellipse._horizontal {
-  left: 0;
+.cards__item:nth-child(4n+1):hover .cards__item-bg {
+  left: -20px;
+}
+.cards__item:nth-child(4n+1):hover .box {
+  -webkit-animation-name: animationHover;
+  animation-name: animationHover;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: unset;
+  animation-iteration-count: unset;
 }
 .cards__item:nth-child(2n) {
   grid-column: span 1;
   grid-row: span 2;
 }
-.cards__item:nth-child(2n) .cards__item-ellipse._horizontal {
-  fill: var(--vegetables-color);
+.cards__item:nth-child(2n)._vegetables .cards__item-bg {
+  top: -370px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0) rotate(90deg);
+  -ms-transform: translate(-50%, 0) rotate(90deg);
+  transform: translate(-50%, 0) rotate(90deg);
+  width: 309px;
+  height: 423px;
+}
+.cards__item:nth-child(2n) .box {
+  background-color: var(--vegetables-color);
 }
 .cards__item:nth-child(2n) .cards__more {
   margin-top: 139px;
@@ -273,12 +317,25 @@
 .cards__item:nth-child(2n):hover .cards__more p {
   color: var(--white-color);
 }
+.cards__item:nth-child(2n):hover._vegetables .cards__item-bg {
+  top: -90px;
+}
+.cards__item:nth-child(2n):hover .box {
+  -webkit-animation-name: animationHover;
+  animation-name: animationHover;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: unset;
+  animation-iteration-count: unset;
+}
 .cards__item:nth-child(4n+3) {
   grid-column: span 1;
   grid-row: span 1;
 }
-.cards__item:nth-child(4n+3) .cards__item-ellipse._horizontal {
-  fill: var(--berries-color);
+.cards__item:nth-child(4n+3) .box {
+  background-color: var(--berries-color);
 }
 .cards__item:nth-child(4n+3) .cards__more p {
   color: var(--berries-color);
@@ -286,18 +343,44 @@
 .cards__item:nth-child(4n+3):hover .cards__more p {
   color: var(--white-color);
 }
+.cards__item:nth-child(4n+3):hover .cards__item-bg {
+  left: -20px;
+}
+.cards__item:nth-child(4n+3):hover .box {
+  -webkit-animation-name: animationHover;
+  animation-name: animationHover;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: unset;
+  animation-iteration-count: unset;
+}
 .cards__item:nth-child(4n) {
   grid-column: span 1;
   grid-row: span 1;
 }
-.cards__item:nth-child(4n) .cards__item-ellipse._horizontal {
-  fill: var(--juices-color);
+.cards__item:nth-child(4n) .box {
+  background-color: var(--juices-color);
 }
 .cards__item:nth-child(4n) .cards__more p {
   color: var(--juices-color);
 }
 .cards__item:nth-child(4n):hover .cards__more p {
   color: var(--white-color);
+}
+.cards__item:nth-child(4n):hover .cards__item-bg {
+  left: -20px;
+}
+.cards__item:nth-child(4n):hover .box {
+  -webkit-animation-name: animationHover;
+  animation-name: animationHover;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: unset;
+  animation-iteration-count: unset;
 }
 .cards__description {
   position: absolute;
@@ -368,3 +451,56 @@
   background-position: right bottom;
   background-size: 162px 211px;
 }
+
+@-webkit-keyframes animationHover {
+  0% {
+    -webkit-clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+
+@keyframes animationHover {
+  0% {
+    -webkit-clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+@-webkit-keyframes animationHoverInverse {
+  0% {
+    -webkit-clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+@keyframes animationHoverInverse {
+  0% {
+    -webkit-clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+.box {
+  -webkit-animation-name: animationHoverInverse;
+  animation-name: animationHoverInverse;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/*# sourceMappingURL=index.css.map */

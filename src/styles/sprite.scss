@@ -28,20 +28,4 @@
   height: 66px;
 }
 
-.cards__item-ellipse._horizontal {
-  width: 210px;
-  height: 266px;
-  position: absolute;
-  left: -210px;
-  top: 0;
-  transition: var(--transition);
-}
 
-.cards__item-ellipse._vertical {
-  width: 360px;
-  height: 256px;
-  position: absolute;
-  left: 0;
-  top: -256px;
-  transition: var(--transition);
-}

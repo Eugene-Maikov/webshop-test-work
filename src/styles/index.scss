@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 5px;
     }
   }
@@ -227,14 +227,36 @@
     }
   }
 
+  &__item-bg {
+    filter: url('#goo');
+    position: absolute;
+    left: -212px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 206px;
+    height: 300px;
+    transition: var(--transition);
+
+    .box {
+      width: 100%;
+      height: 100%;
+      background-color: var(--juices-color);
+      clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+    }
+  }
+
   &__item:nth-child(4n+1) {
     grid-column: span 2;
     grid-row: span 1;
 
-    .cards__item-ellipse._horizontal {
-      width: 543px;
+    .box {
+      width: 381px;
       left: -379px;
-      fill: var(--fruit-color);
+      background-color: var(--fruit-color);
+    }
+
+    .cards__item-bg{
+      left: -600px;
     }
 
     .cards__more {
@@ -250,8 +272,15 @@
         color: var(--white-color);
       }
 
-      .cards__item-ellipse._horizontal {
-        left: 0;
+      .cards__item-bg {
+        left: -20px;
+      }
+
+      .box {
+        animation-name: animationHover;
+        animation-duration: .7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: unset;
       }
     }
   }
@@ -260,8 +289,18 @@
     grid-column: span 1;
     grid-row: span 2;
 
-    .cards__item-ellipse._horizontal {
-      fill: var(--vegetables-color);
+    &._vegetables{
+      .cards__item-bg{
+        top: -370px;
+        left: 50%;
+        transform: translate(-50%, 0) rotate(90deg);
+        width: 309px;
+        height: 423px;
+      }
+    }
+
+    .box {
+      background-color: var(--vegetables-color);
     }
 
     .cards__more {
@@ -276,6 +315,20 @@
       .cards__more p {
         color: var(--white-color);
       }
+
+      &._vegetables{
+        .cards__item-bg {
+          top: -90px;
+        }
+      }
+
+
+      .box {
+        animation-name: animationHover;
+        animation-duration: .7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: unset;
+      }
     }
   }
 
@@ -283,8 +336,8 @@
     grid-column: span 1;
     grid-row: span 1;
 
-    .cards__item-ellipse._horizontal {
-      fill: var(--berries-color);
+    .box {
+      background-color: var(--berries-color);
     }
 
     .cards__more p {
@@ -295,6 +348,17 @@
       .cards__more p {
         color: var(--white-color);
       }
+
+      .cards__item-bg {
+        left: -20px;
+      }
+
+      .box {
+        animation-name: animationHover;
+        animation-duration: .7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: unset;
+      }
     }
   }
 
@@ -302,8 +366,8 @@
     grid-column: span 1;
     grid-row: span 1;
 
-    .cards__item-ellipse._horizontal {
-      fill: var(--juices-color);
+    .box {
+      background-color: var(--juices-color);
     }
 
     .cards__more p {
@@ -314,8 +378,23 @@
       .cards__more p {
         color: var(--white-color);
       }
+
+      .cards__item-bg {
+        left: -20px;
+      }
+
+      .box {
+        animation-name: animationHover;
+        animation-duration: .7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: unset;
+      }
     }
   }
+
+
+
+
 
   &__description {
     position: absolute;
@@ -390,3 +469,37 @@
 }
 
 // -------------- end CARDS --------------
+
+// -------------- ANIMATION --------------
+@keyframes animationHover {
+  0% {
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+
+@keyframes animationHoverInverse {
+  0% {
+    clip-path: polygon(80% 0, 95% 15%, 100% 40%, 100% 60%, 95% 85%, 80% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+  100% {
+    clip-path: polygon(80% 0, 120% 31%, 54% 25%, 100% 67%, 42% 22%, 18% 82%, 0 100%, 0% 70%, 0% 35%, 0 0);
+  }
+}
+
+// -------------- end ANIMATION --------------
+
+
+
+.cards__item._juices:hover {
+
+}
+
+.box {
+  animation-name: animationHoverInverse;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
