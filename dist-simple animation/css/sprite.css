@@ -1,0 +1,49 @@
+.header__logo svg {
+  width: 217px;
+  height: 56px;
+}
+
+.header__search svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--durk-color);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.header__basket-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--durk-color);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cards__more-icon {
+  width: 65px;
+  height: 66px;
+}
+
+.cards__item-ellipse._horizontal {
+  width: 210px;
+  height: 266px;
+  position: absolute;
+  left: -210px;
+  top: 0;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cards__item-ellipse._vertical {
+  width: 360px;
+  height: 256px;
+  position: absolute;
+  left: 0;
+  top: -256px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
