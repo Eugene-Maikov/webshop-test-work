@@ -5,6 +5,5 @@
 Ссылка на репозиторий разработки: https://github.com/Eugene-Maikov/webshop-test-work
 
 ---
-Верстка осуществлялась с помощью сборки gulp. Реализованы блоки header и cards.
-Ключевые технологии: gulp, js, html, css, scss, json
+Верстка осуществлялась с помощью сборки gulp
 
