@@ -19,16 +19,7 @@
     font-weight: 400;
     line-height: normal;
     padding-bottom: 1px;
-  }
-
-  &__burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5px;
-    margin-left: -5px;
-    position: relative;
-    cursor: pointer;
+    transition: var(--transition);
   }
 
   &__burger-lines {
@@ -45,12 +36,34 @@
       height: 2px;
       background: var(--durk-color);
       border-radius: 10px;
+      transition: var(--transition);
     }
 
     span:last-child {
       width: 25px;
     }
   }
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    margin-left: -5px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .header__burger-text {
+        color: var(--fruit-color);
+      }
+
+      .header__burger-lines span {
+        background: var(--fruit-color);
+      }
+    }
+  }
+
 
   &__phones {
     padding-left: 50px;
@@ -127,6 +140,12 @@
   &__search-icon {
     display: block;
     padding: 5px;
+
+    &:hover {
+      svg {
+        fill: var(--fruit-color);
+      }
+    }
   }
 
   &__basket {
@@ -138,6 +157,12 @@
     display: block;
     margin-right: 10px;
     padding: 5px;
+
+    &:hover {
+      svg {
+        fill: var(--fruit-color);
+      }
+    }
   }
 
   &__basket-count {
@@ -168,10 +193,21 @@
 
   &__item {
     border-radius: 8px;
-    background-color: #FFF;
+    background-color: #6b6b6b;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
     padding: 40px 40px 86px 40px;
     background-repeat: no-repeat;
+
+    &:hover{
+      .cards__more{
+        transform: translateX(45px);
+      }
+      .cards__more-icon{
+        opacity: 1;
+        transform: rotate(0);
+      }
+
+    }
   }
 
   &__item:nth-child(4n+1) {
@@ -217,25 +253,43 @@
   &__more {
     display: block;
     margin-top: 47px;
+    position: relative;
+    transition: var(--transition);
 
-  p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    p {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      transition: var(--transition);
+    }
   }
+  &__more-icon{
+    position: absolute;
+    left: -42px;
+    top: -23px;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: var(--transition);
   }
 
   &__item._fruit {
     background-position: right center;
     background-size: 344px 243px;
 
-    .cards__more{
+    .cards__more {
       margin-top: 66px;
     }
+
     .cards__more p {
       color: var(--fruit-color);
+    }
+
+    &:hover{
+      .cards__more p {
+        color: var(--white-color);
+      }
     }
   }
 
@@ -246,6 +300,12 @@
     .cards__more p {
       color: var(--vegetables-color);
     }
+
+    &:hover{
+      .cards__more p {
+        color: var(--white-color);
+      }
+    }
   }
 
   &__item._berries {
@@ -255,6 +315,12 @@
     .cards__more p {
       color: var(--berries-color);
     }
+
+    &:hover{
+      .cards__more p {
+        color: var(--white-color);
+      }
+    }
   }
 
   &__item._juices {
@@ -263,6 +329,12 @@
 
     .cards__more p {
       color: var(--juices-color);
+    }
+
+    &:hover{
+      .cards__more p {
+        color: var(--white-color);
+      }
     }
   }
 }

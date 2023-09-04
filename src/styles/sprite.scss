@@ -9,6 +9,7 @@
     width: 25px;
     height: 25px;
     fill: var(--durk-color);
+    transition: var(--transition);
   }
 }
 .header__basket-icon{
@@ -16,5 +17,10 @@
     width: 28px;
     height: 28px;
     fill: var(--durk-color);
+    transition: var(--transition);
   }
+}
+.cards__more-icon{
+  width: 65px;
+  height: 66px;
 }

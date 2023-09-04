@@ -7,11 +7,22 @@
   width: 25px;
   height: 25px;
   fill: var(--durk-color);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
 }
 
 .header__basket-icon svg {
   width: 28px;
   height: 28px;
   fill: var(--durk-color);
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.cards__more-icon {
+  width: 65px;
+  height: 66px;
 }
 /*# sourceMappingURL=sprite.css.map */
