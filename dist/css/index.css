@@ -104,6 +104,9 @@
   -ms-flex-align: center;
   align-items: center;
 }
+.header__phones-row:not(:last-child) {
+  margin-bottom: 5px;
+}
 .header__phones-number {
   color: var(--durk-color);
   font-family: "Roboto Condensed", sans-serif;
@@ -195,6 +198,9 @@
   text-align: center;
 }
 
+.cards {
+  margin: 40px 0 69px 0;
+}
 .cards__inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
