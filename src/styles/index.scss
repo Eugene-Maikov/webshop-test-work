@@ -193,41 +193,128 @@
 
   &__item {
     border-radius: 8px;
-    background-color: #6b6b6b;
+    background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
     padding: 40px 40px 86px 40px;
     background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
 
-    &:hover{
-      .cards__more{
-        transform: translateX(45px);
+    &:hover {
+      .cards__more {
+        transform: translateX(37px);
       }
-      .cards__more-icon{
+
+      .cards__more-icon {
         opacity: 1;
         transform: rotate(0);
       }
 
+      .cards__item-ellipse._horizontal {
+        left: 0;
+      }
+
+      .cards__item-ellipse._vertical {
+        top: 0;
+      }
     }
   }
 
   &__item:nth-child(4n+1) {
     grid-column: span 2;
     grid-row: span 1;
+
+    .cards__item-ellipse._horizontal {
+      width: 543px;
+      left: -379px;
+      fill: var(--fruit-color);
+    }
+
+    .cards__more {
+      margin-top: 140px;
+    }
+
+    .cards__more p {
+      color: var(--fruit-color);
+    }
+
+    &:hover {
+      .cards__more p {
+        color: var(--white-color);
+      }
+
+      .cards__item-ellipse._horizontal {
+        left: 0;
+      }
+    }
   }
 
   &__item:nth-child(2n) {
     grid-column: span 1;
     grid-row: span 2;
+
+    .cards__item-ellipse._horizontal {
+      fill: var(--vegetables-color);
+    }
+
+    .cards__more {
+      margin-top: 139px;
+    }
+
+    .cards__more p {
+      color: var(--vegetables-color);
+    }
+
+    &:hover {
+      .cards__more p {
+        color: var(--white-color);
+      }
+    }
   }
 
   &__item:nth-child(4n+3) {
     grid-column: span 1;
     grid-row: span 1;
+
+    .cards__item-ellipse._horizontal {
+      fill: var(--berries-color);
+    }
+
+    .cards__more p {
+      color: var(--berries-color);
+    }
+
+    &:hover {
+      .cards__more p {
+        color: var(--white-color);
+      }
+    }
   }
 
   &__item:nth-child(4n) {
     grid-column: span 1;
     grid-row: span 1;
+
+    .cards__item-ellipse._horizontal {
+      fill: var(--juices-color);
+    }
+
+    .cards__more p {
+      color: var(--juices-color);
+    }
+
+    &:hover {
+      .cards__more p {
+        color: var(--white-color);
+      }
+    }
+  }
+
+  &__description {
+    position: absolute;
+    z-index: 1;
+    padding-right: 30px;
   }
 
   &__title {
@@ -252,7 +339,7 @@
 
   &__more {
     display: block;
-    margin-top: 47px;
+    margin-top: 122px;
     position: relative;
     transition: var(--transition);
 
@@ -265,7 +352,8 @@
       transition: var(--transition);
     }
   }
-  &__more-icon{
+
+  &__more-icon {
     position: absolute;
     left: -42px;
     top: -23px;
@@ -277,65 +365,21 @@
   &__item._fruit {
     background-position: right center;
     background-size: 344px 243px;
-
-    .cards__more {
-      margin-top: 66px;
-    }
-
-    .cards__more p {
-      color: var(--fruit-color);
-    }
-
-    &:hover{
-      .cards__more p {
-        color: var(--white-color);
-      }
-    }
   }
 
   &__item._vegetables {
     background-position: right bottom;
     background-size: 292px 260px;
-
-    .cards__more p {
-      color: var(--vegetables-color);
-    }
-
-    &:hover{
-      .cards__more p {
-        color: var(--white-color);
-      }
-    }
   }
 
   &__item._berries {
     background-position: right bottom;
     background-size: 192px 171px;
-
-    .cards__more p {
-      color: var(--berries-color);
-    }
-
-    &:hover{
-      .cards__more p {
-        color: var(--white-color);
-      }
-    }
   }
 
   &__item._juices {
     background-position: right bottom;
     background-size: 162px 211px;
-
-    .cards__more p {
-      color: var(--juices-color);
-    }
-
-    &:hover{
-      .cards__more p {
-        color: var(--white-color);
-      }
-    }
   }
 }
 

@@ -61,7 +61,7 @@
   --berries-color: #FC8663;
   --juices-color: #88BCB9;
 
-  --transition: all .3s ease-in-out;
+  --transition: all .4s ease-in-out;
 }
 
 //---------------------------- end Variables -------------------------------
@@ -116,7 +116,8 @@ picture source {
   padding: 0 var(--container-offset);
   max-width: var(--main-container-width);
 }
-.container-small{
+
+.container-small {
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-offset);

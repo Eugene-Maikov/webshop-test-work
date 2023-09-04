@@ -1,10 +1,11 @@
-.header__logo{
+.header__logo {
   svg {
     width: 217px;
     height: 56px;
   }
 }
-.header__search{
+
+.header__search {
   svg {
     width: 25px;
     height: 25px;
@@ -12,15 +13,35 @@
     transition: var(--transition);
   }
 }
-.header__basket-icon{
-  svg{
+
+.header__basket-icon {
+  svg {
     width: 28px;
     height: 28px;
     fill: var(--durk-color);
     transition: var(--transition);
   }
 }
-.cards__more-icon{
+
+.cards__more-icon {
   width: 65px;
   height: 66px;
+}
+
+.cards__item-ellipse._horizontal {
+  width: 210px;
+  height: 266px;
+  position: absolute;
+  left: -210px;
+  top: 0;
+  transition: var(--transition);
+}
+
+.cards__item-ellipse._vertical {
+  width: 360px;
+  height: 256px;
+  position: absolute;
+  left: 0;
+  top: -256px;
+  transition: var(--transition);
 }

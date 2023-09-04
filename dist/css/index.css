@@ -204,16 +204,19 @@
 }
 .cards__item {
   border-radius: 8px;
-  background-color: #6b6b6b;
+  background-color: #fff;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
   padding: 40px 40px 86px 40px;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
 }
 .cards__item:hover .cards__more {
-  -webkit-transform: translateX(45px);
-  -ms-transform: translateX(45px);
-  transform: translateX(45px);
+  -webkit-transform: translateX(37px);
+  -ms-transform: translateX(37px);
+  transform: translateX(37px);
 }
 .cards__item:hover .cards__more-icon {
   opacity: 1;
@@ -221,21 +224,79 @@
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
+.cards__item:hover .cards__item-ellipse._horizontal {
+  left: 0;
+}
+.cards__item:hover .cards__item-ellipse._vertical {
+  top: 0;
+}
 .cards__item:nth-child(4n+1) {
   grid-column: span 2;
   grid-row: span 1;
+}
+.cards__item:nth-child(4n+1) .cards__item-ellipse._horizontal {
+  width: 543px;
+  left: -379px;
+  fill: var(--fruit-color);
+}
+.cards__item:nth-child(4n+1) .cards__more {
+  margin-top: 140px;
+}
+.cards__item:nth-child(4n+1) .cards__more p {
+  color: var(--fruit-color);
+}
+.cards__item:nth-child(4n+1):hover .cards__more p {
+  color: var(--white-color);
+}
+.cards__item:nth-child(4n+1):hover .cards__item-ellipse._horizontal {
+  left: 0;
 }
 .cards__item:nth-child(2n) {
   grid-column: span 1;
   grid-row: span 2;
 }
+.cards__item:nth-child(2n) .cards__item-ellipse._horizontal {
+  fill: var(--vegetables-color);
+}
+.cards__item:nth-child(2n) .cards__more {
+  margin-top: 139px;
+}
+.cards__item:nth-child(2n) .cards__more p {
+  color: var(--vegetables-color);
+}
+.cards__item:nth-child(2n):hover .cards__more p {
+  color: var(--white-color);
+}
 .cards__item:nth-child(4n+3) {
   grid-column: span 1;
   grid-row: span 1;
 }
+.cards__item:nth-child(4n+3) .cards__item-ellipse._horizontal {
+  fill: var(--berries-color);
+}
+.cards__item:nth-child(4n+3) .cards__more p {
+  color: var(--berries-color);
+}
+.cards__item:nth-child(4n+3):hover .cards__more p {
+  color: var(--white-color);
+}
 .cards__item:nth-child(4n) {
   grid-column: span 1;
   grid-row: span 1;
+}
+.cards__item:nth-child(4n) .cards__item-ellipse._horizontal {
+  fill: var(--juices-color);
+}
+.cards__item:nth-child(4n) .cards__more p {
+  color: var(--juices-color);
+}
+.cards__item:nth-child(4n):hover .cards__more p {
+  color: var(--white-color);
+}
+.cards__description {
+  position: absolute;
+  z-index: 1;
+  padding-right: 30px;
 }
 .cards__title {
   color: var(--durk-color);
@@ -257,7 +318,7 @@
 }
 .cards__more {
   display: block;
-  margin-top: 47px;
+  margin-top: 122px;
   position: relative;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -289,43 +350,16 @@
   background-position: right center;
   background-size: 344px 243px;
 }
-.cards__item._fruit .cards__more {
-  margin-top: 66px;
-}
-.cards__item._fruit .cards__more p {
-  color: var(--fruit-color);
-}
-.cards__item._fruit:hover .cards__more p {
-  color: var(--white-color);
-}
 .cards__item._vegetables {
   background-position: right bottom;
   background-size: 292px 260px;
-}
-.cards__item._vegetables .cards__more p {
-  color: var(--vegetables-color);
-}
-.cards__item._vegetables:hover .cards__more p {
-  color: var(--white-color);
 }
 .cards__item._berries {
   background-position: right bottom;
   background-size: 192px 171px;
 }
-.cards__item._berries .cards__more p {
-  color: var(--berries-color);
-}
-.cards__item._berries:hover .cards__more p {
-  color: var(--white-color);
-}
 .cards__item._juices {
   background-position: right bottom;
   background-size: 162px 211px;
-}
-.cards__item._juices .cards__more p {
-  color: var(--juices-color);
-}
-.cards__item._juices:hover .cards__more p {
-  color: var(--white-color);
 }
 /*# sourceMappingURL=index.css.map */
