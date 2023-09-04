@@ -182,23 +182,15 @@
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: repeat(2, 266px);
   grid-gap: 30px;
+  grid-auto-flow: dense;
 }
 .cards__item {
   border-radius: 8px;
-  background: #FFF;
+  background-color: #FFF;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
   padding: 40px 40px 86px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  background-repeat: no-repeat;
 }
 .cards__item:nth-child(4n+1) {
   grid-column: span 2;
@@ -234,6 +226,10 @@
   font-weight: 400;
   line-height: normal;
 }
+.cards__more {
+  display: block;
+  margin-top: 47px;
+}
 .cards__more p {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
@@ -241,14 +237,33 @@
   font-weight: 700;
   line-height: normal;
 }
+.cards__item._fruit {
+  background-position: right center;
+  background-size: 344px 243px;
+}
+.cards__item._fruit .cards__more {
+  margin-top: 66px;
+}
 .cards__item._fruit .cards__more p {
   color: var(--fruit-color);
+}
+.cards__item._vegetables {
+  background-position: right bottom;
+  background-size: 292px 260px;
 }
 .cards__item._vegetables .cards__more p {
   color: var(--vegetables-color);
 }
+.cards__item._berries {
+  background-position: right bottom;
+  background-size: 192px 171px;
+}
 .cards__item._berries .cards__more p {
   color: var(--berries-color);
+}
+.cards__item._juices {
+  background-position: right bottom;
+  background-size: 162px 211px;
 }
 .cards__item._juices .cards__more p {
   color: var(--juices-color);

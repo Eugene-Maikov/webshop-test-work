@@ -44,9 +44,12 @@
   //font-family: 'Amatic SC', cursive;
   //font-family: 'Roboto Condensed', sans-serif;
 
+  --main-content-width: 1720px;
+  --small-content-width: 1140px;
   --content-width: 1720px;
   --container-offset: 15px;
-  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --main-container-width: calc(var(--main-content-width) + (var(--container-offset) * 2));
+  --small-container-width: calc(var(--small-content-width) + (var(--container-offset) * 2));
 
   --white-color: #FFF;
   --durk-color: #292B2A;
@@ -109,5 +112,11 @@ picture source {
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  max-width: var(--main-container-width);
+}
+.container-small{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--small-container-width);
 }

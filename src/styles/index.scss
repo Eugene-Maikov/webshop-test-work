@@ -95,11 +95,11 @@
     white-space: nowrap;
   }
 
-  &__logo{
+  &__logo {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
   &__right {
@@ -163,33 +163,38 @@
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-template-rows: repeat(2, 266px);
     grid-gap: 30px;
+    grid-auto-flow: dense;
   }
-  &__item{
+
+  &__item {
     border-radius: 8px;
-    background: #FFF;
+    background-color: #FFF;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
     padding: 40px 40px 86px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-repeat: no-repeat;
   }
+
   &__item:nth-child(4n+1) {
     grid-column: span 2;
     grid-row: span 1;
   }
+
   &__item:nth-child(2n) {
     grid-column: span 1;
     grid-row: span 2;
   }
+
   &__item:nth-child(4n+3) {
     grid-column: span 1;
     grid-row: span 1;
   }
+
   &__item:nth-child(4n) {
     grid-column: span 1;
     grid-row: span 1;
   }
-  &__title{
+
+  &__title {
     color: var(--durk-color);
     font-family: 'Amatic SC', cursive;
     font-size: 40px;
@@ -199,7 +204,8 @@
     text-transform: uppercase;
     margin-bottom: 5px;
   }
-  &__slogan{
+
+  &__slogan {
     color: var(--durk-color);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
@@ -207,32 +213,58 @@
     font-weight: 400;
     line-height: normal;
   }
-  &__more p{
+
+  &__more {
+    display: block;
+    margin-top: 47px;
+
+  p {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
+  }
+
   &__item._fruit {
-    .cards__more p{
+    background-position: right center;
+    background-size: 344px 243px;
+
+    .cards__more{
+      margin-top: 66px;
+    }
+    .cards__more p {
       color: var(--fruit-color);
     }
   }
-    &__item._vegetables {
-    .cards__more p{
+
+  &__item._vegetables {
+    background-position: right bottom;
+    background-size: 292px 260px;
+
+    .cards__more p {
       color: var(--vegetables-color);
     }
   }
-    &__item._berries {
-    .cards__more p{
+
+  &__item._berries {
+    background-position: right bottom;
+    background-size: 192px 171px;
+
+    .cards__more p {
       color: var(--berries-color);
     }
   }
-    &__item._juices {
-    .cards__more p{
+
+  &__item._juices {
+    background-position: right bottom;
+    background-size: 162px 211px;
+
+    .cards__more p {
       color: var(--juices-color);
     }
   }
 }
+
 // -------------- end CARDS --------------
